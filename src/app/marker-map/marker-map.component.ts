@@ -35,7 +35,6 @@ export class MarkerMapComponent implements OnInit {
     };
     this.loadTimePeriodData(timePeriod);
     this.zoomEventsSub = Observable.fromEvent(this.map.map, 'zoom').subscribe(() => {
-      console.log('map was zoomed')
       const level = Math.floor(this.map.map.getZoom());
       if (level !== this.clusterLvl) {
         this.clusterLvl = level;
