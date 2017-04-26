@@ -14,9 +14,9 @@ export class PopupMapComponent implements OnInit {
   @ViewChild('ancestorList') ancestorListPopover: ElementRef;
 
   ancestors: any[];
+  selectedAncestor: any;
 
   private popup: mapboxgl.Popup;
-  private selectedAncestor: any;
 
   constructor() { }
 
