@@ -5,7 +5,6 @@
 <app-map #map [options]="{minZoom: 0, center: [-96, 37.8]}"></app-map>
 <div hidden>
     <div #ancestorDetail>
-        <button class="icon iconArrowLeft link" *ngIf="selectedCluster" (click)="ancestorDetailBack()">Back</button>
         <div class="userCard" *ngIf="selectedAncestor">
             <div class="userCardContent">
                 <h3 class="userCardTitle">{{selectedAncestor.givenNames}} {{selectedAncestor.surname}}</h3>
