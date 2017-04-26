@@ -34,7 +34,7 @@ export class MapComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    (<any>mapboxgl).accessToken = MapComponent.accessToken;
+    (<any>mapboxgl).accessToken = mapboxgl.accessToken || MapComponent.accessToken;
     this.supported = mapboxgl.supported();
     if (!this.supported) {
       // handle unsupported
