@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, Input, Output, EventEmitter, NgZone } from '@angular/core';
-import * as mapboxgl from 'mapbox-gl';
+declare var mapboxgl: any;
 
 let nextId = 0;
 
