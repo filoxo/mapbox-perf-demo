@@ -11,5 +11,7 @@ export class PopupMapComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  initializeMap() {
+    console.log('popup-map initialized');
+  }
 }

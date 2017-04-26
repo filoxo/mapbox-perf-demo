@@ -12,4 +12,7 @@ export class MarkerMapComponent implements OnInit {
   ngOnInit() {
   }
 
+  initializeMap() {
+    console.log('marker-map initialized')
+  }
 }
