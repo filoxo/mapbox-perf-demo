@@ -1,2 +1,29 @@
 <h2>Popup map demo</h2>
-<app-map [options]="{minZoom: 0}" (onLoad)="initializeMap()"></app-map>
+<div>
+    <button type="button" class="btn" *ngFor="let ancestor of ancestors" (click)="selectAncestor(ancestor)">{{ ancestor.givenNames }} {{ ancestor.surname }}</button>
+</div>
+<app-map #map [options]="{minZoom: 0, center: [-96, 37.8]}"></app-map>
+<div hidden>
+    <div #ancestorDetail>
+        <button class="icon iconArrowLeft link" *ngIf="selectedCluster" (click)="ancestorDetailBack()">Back</button>
+        <div class="userCard" *ngIf="selectedAncestor">
+            <div class="userCardContent">
+                <h3 class="userCardTitle">{{selectedAncestor.givenNames}} {{selectedAncestor.surname}}</h3>
+                <div class="userCardInfo">
+                    <div class="eventInfo">
+                        <span *ngIf="selectedAncestor.birthYear">{{selectedAncestor.birthYear}}</span>
+                        <div *ngIf="selectedAncestor.birthPlace && selectedAncestor.birthPlace.name">
+                            {{selectedAncestor.birthPlace.name}}
+                        </div>
+                    </div>
+                    <div class="eventInfo">
+                        <span *ngIf="selectedAncestor.deathYear">{{selectedAncestor.deathYear}}</span>
+                        <div *ngIf="selectedAncestor.deathPlace && selectedAncestor.deathPlace.name">
+                            {{selectedAncestor.deathPlace.name}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
