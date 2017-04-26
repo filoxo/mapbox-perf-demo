@@ -58,6 +58,7 @@ export class MarkerMapComponent implements OnInit {
 
   private getClusters(level) {
     this.markers.forEach(marker => marker.remove());
+    this.markerElements.forEach(el => el.remove());
     this.markers = [];
     this.markerElements = [];
     this.clusters = this.clusterManager.getClusters(level);
