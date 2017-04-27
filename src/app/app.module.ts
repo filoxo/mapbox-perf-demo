@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { MarkerMapComponent } from './marker-map/marker-map.component';
 import { PopupMapComponent } from './popup-map/popup-map.component';
 import { MapComponent } from './shared/map/map.component';
+import { SpeedTestMapComponent } from './speed-test-map/speed-test-map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MarkerMapComponent,
     PopupMapComponent,
-    MapComponent
+    MapComponent,
+    SpeedTestMapComponent
   ],
   imports: [
     BrowserModule,
