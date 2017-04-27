@@ -53,10 +53,10 @@ export class MapComponent implements AfterViewInit {
     }
   }
 
-    ngOnDestroy() {
-        if (this.map !== undefined) {
-            this.ngZone.runOutsideAngular(() => this.map.remove());
-        }
+  ngOnDestroy() {
+    if (this.map !== undefined) {
+      this.ngZone.runOutsideAngular(() => this.map.remove());
     }
+  }
 
 }
